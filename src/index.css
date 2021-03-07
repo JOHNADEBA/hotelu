@@ -1,13 +1,247 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Bungee&family=Bungee+Shade&display=swap");
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+ul {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  color: #eee;
+}
+span {
+  line-height: 5;
+}
+.log {
+  color: rgb(23, 23, 118);
+  font-size: 3rem;
+  cursor: pointer;
+  font-family: "Bungee Shade", cursive;
+}
+.navbar {
+  width: 100%;
+  height: 5rem;
+  font-family: "Aclonica", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #555;
+  color: #eee;
+}
+.navbar:hover {
+  background: #333;
+  color: #ccc;
+}
+.logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bar {
+  padding-top: 7px;
+  color: #ccc;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  border: none;
+  background: none;
+  outline: 0;
+}
+.bar:hover,
+.link:hover,
+.log:hover {
+  color: #bbb;
+}
+.bar:focus {
+  outline: 0;
+}
+.menu,
+.menud {
+  display: flex;
+  justify-content: space-between;
+  width: 13rem;
+}
+
+.contact {
+  text-align: center;
+  font-size: 0.8rem;
+}
+.nav-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  background: #eee;
+  outline: 0;
+}
+.nav-btn:hover {
+  background: #555;
+  color: #ccc;
+}
+.sidebar {
+  width: 100%;
+  background: rgb(0, 0, 0, 0.92);
+  position: absolute;
+  height: 100vh;
+  display: none;
+}
+.menud {
+  margin: 5rem auto;
+}
+.top,
+.tops {
+  background: url("https://media-cdn.tripadvisor.com/media/photo-s/12/55/b9/a9/hotel-rameswaram-grand.jpg")
+    center/cover no-repeat;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tops {
+  height: 95vh;
+}
+.top-head {
+  font-size: 6rem;
+  margin: 0;
+}
+.top-top {
+  padding: 2rem;
+  text-align: center;
+  margin: auto;
+  background: rgb(0, 0, 0, 0.5);
+  color: white;
+}
+.top-middle {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+.btns {
+  padding: 1rem;
+  border: none;
+  border-radius: 3rem;
+}
+.btn,
+.room-btn {
+  text-decoration: none;
+  color: black;
+}
+.btns:hover,
+.btn:hover,
+.room-btn:hover {
+  color: white;
+  background: #555;
+}
+.room-btn {
+  background: cornsilk;
+  border: none;
+  padding: 0.7rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  font-family: "Aclonica", sans-serif;
+}
+.array-services {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 2rem;
+  text-align: center;
+  text-decoration: ;
+}
+.services-details {
+  width: 24%;
+}
+.all-rooms,
+.deal-rooms {
+  margin: 2rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.room-words {
+  color: #555;
+  background: cornsilk;
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+.one-room {
+  width: 30%;
+  height: 12rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+}
+.sub-img {
+  display: flex;
+  justify-content: space-around;
+}
+.real-img {
+  width: 24%;
+}
+@media screen and (max-width: 720px) {
+  .contact,
+  .nav-btn,
+  .menu {
+    display: none;
+  }
+  .bar {
+    display: block;
+  }
+  .logo {
+    width: 100%;
+  }
+  .sidebar {
+    display: block;
+  }
+  .link {
+    line-height: 1;
+  }
+  .services-details {
+    width: 40%;
+  }
+  .one-room {
+    width: 40%;
+  }
+  .real-img {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 435px) {
+  .services-details {
+    width: 90%;
+  }
+  .one-room {
+    width: 70%;
+  }
+  .real-img {
+    width: 70%;
+  }
+  .sub-img {
+    flex-direction: column;
+    margin-left: 2rem;
+  }
 }
